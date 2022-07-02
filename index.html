@@ -1,0 +1,58 @@
+<!--index.html-->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+  <meta>
+  <title>electron-info-collection (npm)</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+  We are using Node.js <span id="node-version"></span>,
+  Chromium <span id="chrome-version"></span>,
+  and Electron <span id="electron-version"></span>.
+  <div class="npmInfo">
+    <input class="input-npm" type="text" value='' placeholder="请输入你的npm包"> <button onclick="searchNpm()">查找npm</button>
+    <h1 class="npm-title">mini-H5-tools</h1>
+    <div class="info" style='display: none;'>
+      <div>
+        <span>仓库信息: </span> <span class="Repository">Loading...</span>
+      </div>
+      <div>
+        <span>主页信息: </span> <span class="Homepage">Loading...</span>
+      </div>
+      <div>
+        <span>周下载量: </span> <span class="weekLoadNums">Loading...</span>
+      </div>
+      <div>
+        <span>版本信息: </span> <span class="Version">Loading...</span>
+      </div>
+      <div>
+        <span>License: </span> <span class="License">Loading...</span>
+      </div>
+      <div>
+        <span>文件大小: </span> <span class="UnpackedSize">Loading...</span>
+      </div>
+      <div>
+        <span>文件数量: </span> <span class="TotalFiles">Loading...</span>
+      </div>
+      <div>
+        <span>更新时间: </span> <span class="LastPublish">Loading...</span>
+      </div>
+    </div>
+
+    <h2 class="loading" style='display: block;'>
+      Loading.......
+    </h2>
+
+    <button onclick="updateNpmInfo()">更新</button>
+    <button onclick="updateNpmInfo('1h')">每1h更新一次</button>
+  </div>
+
+  <script src="./getData.js"></script>
+</body>
+
+</html>
